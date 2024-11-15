@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Evaluating mathematical reasoning of foundation models in visual contexts">
+  <meta name="keywords" content="MathVista, Math Vista">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> PhysBench</title>
+
+  <link rel="icon" href="./static/images/icon.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/leaderboard.css">
+
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <img src="static/images/icon.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista" style="vertical-align: middle">AnyEdit</span>
+            </h1>
+          <h2 class="subtitle is-3 publication-subtitle">
+            Unified High-Quality Image Edit with Any Idea
+          </h2>
+          <div class="is-size-5 publication-authors">
+            <!-- <span class="author-block">Anonymous</span> -->
+
+           <span class="author-block">
+            <a href="None">Qifan Yu</a><sup style="color:#6fbf73;">1</sup><sup>*</sup>,</span>
+           <span class="author-block">
+             <a href="None">Wei Chow</a><sup style="color:#6fbf73;">1</sup><sup>*</sup>,</span>
+           <span class="author-block">
+             <a href="None">Zhongqi Yue</a><sup style="color:#ffac33;">2</sup>,</span>
+           <span class="author-block">
+             <a href="None">Kaihang Pan</a><sup style="color:#6fbf73;">1</sup>,</span>
+           <span class="author-block">
+             <a href="None">Yang Wu</a><sup style="color:#ac33ff">3</sup>,</span> 
+           <span class="author-block">
+            <a href="None">Xiaoyang Wan</a><sup style="color:#6fbf73;">1</sup>,</span><br>
+          <span class="author-block">
+            <a href="None">Juncheng Li</a><sup style="color:#6fbf73;">1</sup>,</span>
+          <span class="author-block">
+            <a href="None">Siliang Tang</a><sup style="color:#6fbf73;">1</sup>,</span>
+          <span class="author-block">
+            <a href="None">Hanwang Zhang</a><sup style="color:#ffac33;">2</sup>,</span>
+          <span class="author-block">
+            <a href="None">Yueting Zhuang</a><sup style="color:#6fbf73;">1</sup>,</span>
+          </div>
+         <div class="is-size-5 publication-authors">
+           <span class="author-block"><sup style="color:#6fbf73;">1</sup>Zhejiang University,</span>
+           <span class="author-block"><sup style="color:#ffac33">2</sup>Nanyang Technological University,</span
+           <span class="author-block"><sup style="color:#ac33ff">3</sup>Alibaba Group</span><br>
+           <span class="author-block"><sup>*</sup>Equal Contribution</span><br>
+           <!-- <span class="paper-block"><b style="color:#f41c1c">under review for ICLR 2025</b> </span> -->
+        </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="TODO"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="TODO"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="TODO"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <!-- <i class="far fa-images"></i> -->
+                      <p style="font-size:18px">🤗</p>
+                      <!-- 🔗 -->
+                  </span>
+                  <span>AnyEdit</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="TODO"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <!-- <i class="far fa-images"></i> -->
+                      <p style="font-size:18px">🤗</p>
+                      <!-- 🔗 -->
+                  </span>
+                  <span>Checkpoint</span>
+                </a>
+              </span>
+              <!-- Leaderboard Link. -->
+              <span class="link-block">
+                <a href="https://todo.github.io/#leaderboard"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🏆</p>
+                  </span>
+                  <span>AnyEdit-Test</span>
+                </a>
+              </span>
+              <!-- Eval.AI Link -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="margin-bottom: 1vh;">
+    <!-- Abstract. -->
+    <!-- <div class="content has-text-centered">
+      <img src="static/images/teaser.png" alt="algebraic reasoning" width="80%"/>
+      <p>
+        Examples of <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+        <span class="mathvista">AnyEdit</span> at scale. We comprehensively categorize image editing tasks into 5 groups based on different editing capabilities:
+        (a) <b>Local Editing</b> which focuses on region-based editing (<span style="color: green;">green area</span>);
+        (b) <b>Global Editing</b> which focuses on the full range of image rendering (<span style="color: yellow;">yellow area</span>);
+        (c) <b>Camera Move Editing</b> which focuses on viewpoints changing instead of scenes (<span style="color: gray;">gray area</span>);
+        (d) <b>Implicit Editing</b> which requires commonsense knowledge to complete complex editing (<span style="color: orange;">orange area</span>);
+        (e) <b>Visual Editing</b> which encompasses additional visual inputs, addressing the requirements for multi-modal editing (<span style="color: blue;">blue area</span>).
+      </p>
+      <br>
+    </div> -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Introduction</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>Instruction-based image editing</b> aims to modify specific image elements with natural language instructions. However, current models in this domain often struggle to accurately execute complex user instructions, as they are trained on low-quality data with limited editing types. We present <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">AnyEdit</span>, a comprehensive multi-modal instruction editing dataset, comprising <b>2.5 million high-quality editing pairs</b> spanning over <b>20 editing types</b> and <b>five domains</b>.
+          </p>
+          <p>
+            We ensure the diversity and quality of the <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">AnyEdit</span> collection through three aspects: <b>initial data diversity</b>, <b>adaptive editing process</b>, and <b>automated selection of editing results</b>.
+          </p>
+          <p>
+            Using the dataset, we further train a novel AnyEdit Stable Diffusion with <b>task-aware routing</b> and <b>learnable task embedding</b> for unified image editing. Comprehensive experiments on three benchmark datasets show that <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">AnyEdit</span> consistently boosts the performance of diffusion-based editing models.
+          </p>
+          <p>
+            This presents prospects for developing <b>instruction-driven image editing models</b> that support human creativity.
+          </p>
+        </div>        
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</div>
+</section>
+
+<!-- DATASET SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+  <h1 class="title is-1 mathvista">
+    <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">AnyEdit Dataset</span>
+  </h1>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            We propose <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">AnyEdit</span>, which comprehensively evaluates VLMs' perception of the physical world across four major task categories:
+          </p>
+          <p>
+            <ul>
+            We comprehensively categorize image editing tasks into 5 groups based on different editing capabilities:
+            <li>(a) <b>Local Editing</b> which focuses on region-based editing (<span style="color: green;">green area</span>);
+            </li><li>(b) <b>Global Editing</b> which focuses on the full range of image rendering (<span style="color: yellow;">yellow area</span>);
+            </li><li>(c) <b>Camera Move Editing</b> which focuses on viewpoints changing instead of scenes (<span style="color: gray;">gray area</span>);
+          </li><li>(d) <b>Implicit Editing</b> which requires commonsense knowledge to complete complex editing (<span style="color: orange;">orange area</span>);
+          </li><li>(e) <b>Visual Editing</b> which encompasses additional visual inputs, addressing the requirements for multi-modal editing (<span style="color: blue;">blue area</span>).
+          </li></ul>
+          </p>
+          <div class="content has-text-centered">
+            <img src="static/images/teaser.png" alt="algebraic reasoning" width="100%"/>
+            <p>Examples of <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">AnyEdit</span> at scale.</p>
+            <br>
+          </div>
+          
+          <p>
+            In <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">AnyEdit</span>, we combine five distinct groups of data, covering <b>25 editing types</b>, which will be released to help the community. It is worth noting that <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">AnyEdit</span> is the only dataset that considers the <b>data bias</b> and introduces <b>counterfactual synthetic scenes</b> to balance the distribution of the dataset.
+          </p>          
+
+          <div class="content has-text-centered">
+            <img src="static/images/related.png" alt="arithmetic reasoning" width="90%"/><br>
+              Comparison of existing image editing datasets. “<b>Real Image</b>” means the original images are from real world, “<b>Synthetic Image</b>” means they are from T2I models, “<b>Synthetic Scene</b>” indicates both images and captions are generated to address the inherent data bias.
+          </div>
+
+          <p>
+            Subsequently, we invoke off-the-shelf T2I models to produce the initial images. In this manner, we enrich the original dataset by incorporating rare concept combinations, resulting in &#8764;700K high-quality and diverse image-caption pairs for the <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">AnyEdit</span> dataset collection.
+          </p>
+          
+          <div class="content has-text-centered">
+            <img src="static/images/score.png" alt="data-overview" style="max-width: 70%;"/>
+            <p>
+              Data preparation details for <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">AnyEdit</span> dataset collection.<br/>
+            </p>
+        </div>
+        <center><h2 class="title is-3">Pipeline</h2></center>
+        <p>
+          We summarize the general pipeline into five steps: 
+          <br>
+          (1) General data preparation from real-world image-text pairs and synthetic scenes. 
+          <br>
+          (2) Diverse instruction generation using <b>LLM</b> to produce high-quality editing instructions. 
+          <br>
+          (3) Pre-filtering for instruction validation. 
+          <br>
+          (4) Adaptive editing pipeline tailors specific editing methods for each edit type to generate high-quality edited images. 
+          <br>
+          (5) Image quality assessment ensures high-quality editing pairs for the <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <span class="mathvista">AnyEdit</span> Dataset.
+        </p>
+        <div class="content has-text-centered">
+          <img src="static/images/pipeline.png" alt="data-overview" style="max-width: 100%;"/>
+          <p>
+            The comprehensive construction pipeline of <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">AnyEdit</span>.<br/>
+          </p>
+        </div>  
+        </div>
+      </div>
+    </div>
+
+
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Cases in <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <span class="mathvista">AnyEdit</span></h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anyedit/1-1.png" alt="qs-len" class="stats-image"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anyedit/1-2.png" alt="reasoning" class="stats-image"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anyedit/2-1.png" alt="reasoning" class="stats-image"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anyedit/2-2.png" alt="reasoning" class="stats-image"/>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Cases in <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <span class="mathvista">AnyEdit</span>-Test</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anyedit/4.png" alt="qs-len" width="70%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anyedit/5.png" alt="reasoning" width="70%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anyedit/6.png" alt="reasoning" width="70%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anyedit/7.png" alt="reasoning" width="70%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anyedit/8.png" alt="reasoning" width="70%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anyedit/9.png" alt="reasoning" width="70%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anyedit/10.png" alt="reasoning" width="70%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anyedit/11.png" alt="reasoning" width="70%"/>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Model SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+  <h1 class="title is-1 mathvista">
+            <span class="mathvista">🎨<span class="mathvista">AnySD</span> Model</span>
+  </h1>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Overview</h2>
+          <div class="content has-text-justified">
+            <p>
+              Since <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">AnyEdit</span> contains a wide range of editing instructions across various domains, it holds promising potential for developing a powerful editing model to address high-quality editing tasks. However, training such a model has three extra challenges: 
+              (a) aligning the semantics of various multi-modal inputs; 
+              (b) identifying the semantic edits within each domain to control the granularity and scope of the edits; 
+              (c) coordinating the complexity of various editing tasks to prevent catastrophic forgetting. 
+              To this end, we propose a novel <b>AnyEdit Stable Diffusion</b> approach (🎨<span class="mathvista">AnySD</span>) to cope with various editing tasks in the real world.
+            </p>
+            <div class="content has-text-centered">
+              <img src="static/images/model.png" alt="grade-lv" width="80%"/>
+              <p>
+                <b>Architecture of 🎨<span class="mathvista">AnySD</span></b>. 🎨<span class="mathvista">AnySD</span> is a novel architecture that supports three conditions (original image, editing instruction, visual prompt) for various editing tasks.
+              </p>            
+            </div>
+          </div>
+          <h2 class="title is-3">Quantity Results</h2>
+          <div class="content has-text-justified">
+            <p>
+              We report the standard image editing results of <b><img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                <span class="mathvista">AnyEdit</span></b> and other baselines on <b>EMU-Edit Test</b> and <b>MagicBrush</b> benchmarks in the table. Based on the experimental results, we have summarized the following conclusions: 
+              <br><b><i>(i)</i></b> Our SD-1.5 with <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">AnyEdit</span>, which only changes the training data to <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">AnyEdit</span>, consistently demonstrates superior semantic performance in both edit alignment and content preservation compared to SOTA methods, even without additional mask supervision (0.872 for CLIP<sub>im</sub> and 0.285 for CLIP<sub>out</sub> on the EMU-Edit Test). It highlights <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">AnyEdit</span>'s effectiveness in mastering high-quality image editing, validating its <b>high-quality editing data with significant semantic alignment and underlying clear editing structure</b>.
+              <br><b><i>(ii)</i></b> Our 🎨<span class="mathvista">AnySD</span> model, trained on <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">AnyEdit</span> using the 🎨<span class="mathvista">AnySD</span> architecture, further surpasses SOTA methods in both semantic and visual similarity (0.872 of CLIP<sub>im</sub> on EMU-Edit Test and 0.881 of DINO on MagicBrush Test), setting new records on MagicBrush and Emu-Edit benchmarks. 
+              <br>This demonstrates <b>the superiority of 🎨<span class="mathvista">AnySD</span> in following editing instructions while preserving unchanged image elements</b>, thanks to its task-aware architecture that learns task-specific knowledge from the diverse editing types in <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">AnyEdit</span>, enhancing the model's cross-task editing capabilities.
+            </p>
+            <div class="content has-text-centered">
+              <img src="static/images/emu.png" alt="grade-lv" width="80%"/>
+              <p>
+                Comparison of methods on <b>EMU-Edit</b> and <b>MagicBrush</b> benchmark. We show performance improvements<br> over SOTA models of the same architecture, with only training data differences.
+              </p>
+            </div>
+
+            <p>
+              Below Table presents the results of the <b><img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                <span class="mathvista">AnyEdit</span>-Test</b> benchmark, where each instruction is designed to rigorously evaluate <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">AnyEdit</span>’s adaptability across a wider range of challenging editing scenarios. We provide further results of each editing category in Appendix <span style="color: red;">F</span>. It can be observed that 
+              <br><b><i>(i)</i></b> most baselines struggle to effectively handle more complex editing tasks that are rarely in standard benchmarks (0.190 v.s. 0.121 on average L1), especially for implicit editing that requires reasoning abilities. This illustrates <b>the importance of <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                <span class="mathvista">AnyEdit</span>-Test for evaluating the performance of editing models on complex tasks</b>.
+              <br><b><i>(ii)</i></b> Even for common editing tasks, state-of-the-art models show a significant decline in consistency performance on <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">AnyEdit</span>-Test (-3.5% on CLIP<sub>im</sub> and -19.2% on DINO of UltraEdit). This underscores <b>the limitations of existing benchmarks in evaluating multi-scene editing</b>.
+              <br><b><i>(iii)</i></b> In contrast, <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">AnyEdit</span> significantly outperforms SOTA methods across all editing categories, demonstrating its scalability and robustness in handling complex tasks across diverse scenarios.
+              <br><b><i>(iv)</i></b> Traditional methods often struggle to handle visual editing effectively due to additional visual inputs. In such cases, even when compared to Uni-ControlNet, which is pre-trained with diverse visual conditions, <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">AnyEdit</span> consistently performs better in visual editing tasks. It shows the efficacy of <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">AnyEdit</span> in handling vision-conditioned editing instructions.
+            </p>
+            <div class="content has-text-centered">
+              <img src="static/images/anybench2.png" alt="grade-lv" width="86%"/>
+              <p>
+                Comparison of methods on <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+                <span class="mathvista">AnyEdit</span>-Test benchmark
+              </p>            
+            </div>
+
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reuslt SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+  <h1 class="title is-1 mathvista">
+            <span class="mathvista">More Quality Cases</span>
+  </h1>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Diversified Editing</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/cases/1.png" alt="qs-len" width="77%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/cases/2.png" alt="qs-len" width="65%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/cases/0.png" alt="qs-len" width="78%"/>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Edit Cases in <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+          <span class="mathvista">AnyEdit</span>-Test</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anysd/1.png" alt="qs-len" width="75%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anysd/2.png" alt="qs-len" width="65%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anysd/3.png" alt="qs-len" width="85%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anysd/4.png" alt="qs-len" width="85%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anysd/5.png" alt="qs-len" width="85%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anysd/6.png" alt="qs-len" width="85%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anysd/7.png" alt="qs-len" width="85%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anysd/8.png" alt="qs-len" width="85%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anysd/9.png" alt="qs-len" width="85%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anysd/10.png" alt="qs-len" width="85%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anysd/11.png" alt="qs-len" width="85%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/anysd/12.png" alt="qs-len" width="85%"/>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Multi-Turnn Edit Cases</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/cases/3.png" alt="qs-len" width="65%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/cases/4.png" alt="qs-len" width="65%"/>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Comparison with More Models</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/cases/5.png" alt="qs-len" width="65%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/cases/6.png" alt="qs-len" width="65%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/cases/7.png" alt="qs-len" width="65%"/>
+              <p></p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/cases/8.png" alt="qs-len" width="65%"/>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS SECTION -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <pre><code>
+      @inproceedings{
+          TODO
+      }
+    </code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+<p style="font-size: 14px;">
+  This website is adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://physbench.github.io/">PhysBench</a>, licensed under a <a rel="license"
+                                              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+  Commons Attribution-ShareAlike 4.0 International License</a>.
+</p>
+        </div>
+      </div>
+    </div>
+</footer>
+
+</body>
+</html>
